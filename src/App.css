@@ -1,0 +1,529 @@
+/*  COLORS  */
+:root {
+  --accent: #c8643a;       
+  --accent-dark: #9e3f1c; 
+  --text: #333;
+}
+
+/* PAGE */
+html {
+  scroll-behavior: smooth; /* nav links glide to each section instead of jumping */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+/*HEADER */
+.site-header {
+  padding: 2rem 0 1.25rem;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--accent-dark);
+  line-height: 1.1;
+}
+
+.site-subtitle {
+  margin: 0.4rem 0 0;
+  text-transform: uppercase;  
+  letter-spacing: 0.12em;     
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* NAV BAR */
+.site-nav {
+  background: var(--accent);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 0.9rem 0;
+}
+
+.site-nav a:hover {
+  color: #ffe3cf;
+}
+
+/* COLUMN LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 280px; 
+  gap: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+main {
+  border-right: 1px solid #e5e5e5;
+  padding-right: 3rem;
+}
+
+section {
+  scroll-margin-top: 4rem; 
+  margin-bottom: 2.5rem;
+}
+
+/* ABOUT ME  */
+.headline {
+  font-size: 2.1rem;
+  font-weight: 300;  
+  line-height: 1.3;
+  margin: 0 0 1.5rem;
+  color: #222;
+}
+
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.headshot {
+  width: 220px;
+  height: 270px;
+  object-fit: cover;
+  flex-shrink: 0;  
+}
+
+.about p {
+  margin-top: 0;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-dark);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* CARDS  */
+.card {
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid var(--accent);
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0.3rem 0 0;
+}
+
+.org {
+  color: #777;
+}
+
+/* DROPDOWN */
+summary {
+  cursor: pointer;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details ul {
+  margin: 0.5rem 0 0;
+}
+
+/* PROJECT FILTER BUTTONS */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.filter {
+  border: 1px solid var(--accent);
+  background: white;
+  color: var(--accent-dark);
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter:hover {
+  background: #fdf0e9;
+}
+
+.filter.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* PROJECT CARDS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* as many columns as fit */
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--accent-dark);
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  flex-grow: 1; 
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+/* ===== COLORS =====
+   Change these three lines to recolor the whole site */
+:root {
+  --accent: #c8643a;       /* your orange: nav bar, box headers, buttons */
+  --accent-dark: #9e3f1c;  /* darker orange: your name, links */
+  --text: #333;
+}
+
+/* ===== WHOLE PAGE ===== */
+html {
+  scroll-behavior: smooth; /* nav links glide to each section instead of jumping */
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Keeps content in a centered column on every part of the page */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  padding: 2rem 0 1.25rem;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 3rem;
+  color: var(--accent-dark);
+  line-height: 1.1;
+}
+
+.site-subtitle {
+  margin: 0.4rem 0 0;
+  text-transform: uppercase;  /* ALL CAPS */
+  letter-spacing: 0.12em;     /* spreads the letters apart */
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===== NAV BAR ===== */
+.site-nav {
+  background: var(--accent);
+  position: sticky;  /* stays at the top of the screen while you scroll */
+  top: 0;
+  z-index: 10;
+}
+
+.site-nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 0.9rem 0;
+}
+
+.site-nav a:hover {
+  color: #ffe3cf;
+}
+
+/* ===== TWO-COLUMN LAYOUT ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 280px; /* main column + 280px sidebar */
+  gap: 3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+main {
+  border-right: 1px solid #e5e5e5; /* thin line between main column and sidebar */
+  padding-right: 3rem;
+}
+
+section {
+  scroll-margin-top: 4rem; /* so the sticky nav doesn't cover section titles */
+  margin-bottom: 2.5rem;
+}
+
+/* ===== ABOUT ME ===== */
+.headline {
+  font-size: 2.1rem;
+  font-weight: 300;  /* thin, elegant headline */
+  line-height: 1.3;
+  margin: 0 0 1.5rem;
+  color: #222;
+}
+
+.about {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.headshot {
+  width: 220px;
+  height: 270px;
+  object-fit: cover;
+  flex-shrink: 0;  /* keeps the photo from getting squished */
+}
+
+.about p {
+  margin-top: 0;
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-dark);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid var(--accent); /* orange stripe on the left */
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card p {
+  margin: 0.3rem 0 0;
+}
+
+.org {
+  color: #777;
+}
+
+/* ===== DROPDOWN ===== */
+summary {
+  cursor: pointer;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+
+summary:hover {
+  text-decoration: underline;
+}
+
+details ul {
+  margin: 0.5rem 0 0;
+}
+
+/* ===== PROJECT FILTER BUTTONS ===== */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 1rem;
+}
+
+.filter {
+  border: 1px solid var(--accent);
+  background: white;
+  color: var(--accent-dark);
+  padding: 0.35rem 1rem;
+  border-radius: 999px; /* pill shape */
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filter:hover {
+  background: #fdf0e9;
+}
+
+.filter.active {
+  background: var(--accent);
+  color: white;
+}
+
+/* ===== PROJECT CARDS ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* as many columns as fit */
+  gap: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 1rem 1.15rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+
+/* Cards lift up a little when you hover over them */
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent);
+}
+
+.project-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  color: var(--accent-dark);
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  flex-grow: 1; /* pushes the language label to the bottom */
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* LANGUAGE TABS */
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dot.Csharp   { background: #7b5cd6; }
+.dot.Assembly { background: #6e4c13; }
+.dot.Cpp      { background: #f34b7d; }
+.dot.PHP      { background: #4f5d95; }
+
+/* SIDEBAR */
+.side-box {
+  margin-bottom: 2rem;
+  border: 1px solid #e5e5e5;
+}
+
+.side-box h4 {
+  margin: 0;
+  background: var(--accent);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1rem;
+}
+
+.side-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+
+.side-box li {
+  padding: 0.25rem 0;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #2e2420;
+  color: #ddd;
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
