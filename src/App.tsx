@@ -1,7 +1,7 @@
 
 import './App.css'
 import { useState } from 'react'
-import me from './assets/me.jpg'
+import me from './assets/me.jpeg'
 
 
 const GITHUB = 'https://github.com/YOURUSERNAME'
@@ -122,7 +122,6 @@ export default function App() {
             <div className="card">
               <h3>Desktop Support Intern</h3>
               <p className="org">Florida State University ITS NWRDC · Fall 2026 – present</p>
-              <p>Describe what you do here in one or two sentences.</p>
             </div>
           </section>
 
@@ -134,7 +133,6 @@ export default function App() {
               <summary>Stuff I'm working on right now</summary>
               <ul>
                 <li><strong>Personal Website:</strong> this site, built with React and Vite</li>
-                <li><strong>Project Name:</strong> a short description of what it does</li>
               </ul>
             </details>
 
