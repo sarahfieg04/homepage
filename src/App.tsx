@@ -4,7 +4,7 @@ import { useState } from 'react'
 import me from './assets/me.jpeg'
 
 
-const GITHUB = 'https://github.com/YOURUSERNAME'
+const GITHUB = 'https://github.com/sarahfieg04'
 
 // PROJECTS 
 const projects = [
