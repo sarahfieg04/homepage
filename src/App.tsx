@@ -101,7 +101,7 @@ export default function App() {
                 </p>
                 <p>
                   Her projects range from web APIs in C# to low-level programs in MIPS
-                  assembly. Outside of class, she enjoys music , going t the gym, and playing video games.
+                  assembly. Outside of class, she enjoys music, going to the gym, and playing video games.
                 </p>
               </div>
             </div>
